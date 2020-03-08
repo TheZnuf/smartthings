@@ -142,7 +142,7 @@ def updated() {
 
 def setup() {
 	log.info "setup"
-   
+
 	sendEvent(name: "checkInterval", value: constants.checkInterval,
 		displayed: false, data: [protocol: "zwave", hubHardwareId: device.hub.hardwareID, offlinePingable: "1"])
 	sendEvent(name: "supportedThermostatModes", value: supportedModeNames)
