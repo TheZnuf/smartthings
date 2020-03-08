@@ -205,16 +205,6 @@ def zwaveEvent(physicalgraph.zwave.Command cmd, ep = null) {
 	return null
 }
 
-def zwaveEvent(physicalgraph.zwave.commands.securityv1.SecurityMessageEncapsulation cmd) {
-	log.warn "SecurityMessageEncapsulation $cmd"
-	def encapsulatedCommand = cmd.encapsulatedCommand(commandClassCapabilities)
-	if (!encapsulatedCommand) return null
-	
-	state.sec = 1
-	log.debug encapsulatedCommand
-	return zwaveEvent(encapsulatedCommand, cmd.sourceEndPoint as Integer)
-}
-
 def zwaveEvent(physicalgraph.zwave.commands.multichannelv3.MultiChannelCmdEncap cmd) {    
 	def encapsulatedCommand = cmd.encapsulatedCommand(commandClassCapabilities)
 	if (!encapsulatedCommand) return null
