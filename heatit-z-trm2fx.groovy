@@ -200,6 +200,7 @@ def zwaveEvent(physicalgraph.zwave.commands.securityv1.SecurityMessageEncapsulat
     if (!encapsulatedCommand) return null
     
     state.sec = 1
+	log.debug encapsulatedCommand
 	return zwaveEvent(encapsulatedCommand, cmd.sourceEndPoint as Integer)
 }
 
