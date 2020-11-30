@@ -1,5 +1,5 @@
 /**
- *  HeatIt Z-TRM2fx
+ *  HeatIt Z-TRM3
  *
  *  Copyright 2020 Magnus
  *
@@ -13,7 +13,7 @@
  *  for the specific language governing permissions and limitations under the License.
  */
 metadata {
-	definition (name: "Heatit Z-TRM2fx", namespace: "ms", author: "Magnus", ocfDeviceType: "oic.d.thermostat", cstHandler: true) {
+	definition (name: "Heatit Z-TRM3", namespace: "ms", author: "Magnus", ocfDeviceType: "oic.d.thermostat", cstHandler: true) {
 		capability "Actuator"
 		capability "Temperature Measurement"
 		capability "Thermostat Mode"
@@ -30,7 +30,7 @@ metadata {
 		command "raiseHeatingSetpoint"
 		command "setup"
 
-		fingerprint mfr: "019B", prod: "0003", model: "0202", deviceJoinName: "HeatIt Z-TRM2fx"
+		fingerprint mfr: "019B", prod: "0003", model: "0203", deviceJoinName: "HeatIt Z-TRM3"
 	}
 
 	tiles(scale:2) {
